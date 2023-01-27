@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form submisssion </title>
+    <style>
+        body{
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #container{
+            background-color: white;
+            text-align: center;
+            padding: 50px;
+            border-radius: 5px;
+        }
+        h2{
+            margin: 0px 0px 10px 0px;
+        }
+        input{
+            padding: 10px;
+            margin: 10px 0px;
+            border: 1px solid blue;
+            width: 200px;
+        }
+        #submit{
+            background-color: blue;
+            cursor: pointer;
+            width: 200px;
+            border: 1px solid blue;
+            color: white;
+        }
+        .error{
+            margin: 0px;
+            text-align: left;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Log in</h2>
+        <form action="" id="form" onclick="return validForm()">
+            <input type="text" id="username" placeholder="User Name"><br>
+            <p id="userError" class="error"></p>
+            <input type="password" id="password" placeholder="Password"><br>
+            <p id="passError" class="error"></p>
+            <input type="submit"  id="submit">
+        </form>
+    </div>
+    <script>
+        let password = document.getElementById("password")
+        let username = document.getElementById("username")
+        let flog = 1;
+
+        function validForm(value){
+            if(username.value == ""){
+                document.getElementById("userError").innerHTML = "Error enter user name"
+                flog = 0;
+            }
+            else if(username.value.length < 3)
+            {
+                document.getElementById("userError").innerHTML = "Error please enter min 3 char"
+                flog = 0;
+            }
+            else{ 
+                document.getElementById("userError").innerHTML = "";
+                flog = 1;
+            }
+
+            if(password.value == ""){
+                document.getElementById("passError").innerHTML = "Error enter user name"
+                flog = 0;
+            }
+            else if(password.value.length < 3)
+            {
+                document.getElementById("passError").innerHTML = "Error please enter min 3 char"
+                flog = 0;
+            }
+            else{ 
+                document.getElementById("userError").innerHTML = "";
+                flog = 1;
+            }
+
+            if(flog)
+            {
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
