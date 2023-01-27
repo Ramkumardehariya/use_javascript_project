@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body{
+            padding: 0px;
+            margin: 50px 100px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+        p{
+            text-align: justify;
+            font-size: 15px;
+        }
+        #span{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            cursor: pointer;
+            border: 2px solid black;
+            border-radius: 50%;
+        }
+        .white{
+            background-color: white;
+        }
+        .black{
+            background-color: black;
+        }
+        .aqua{
+            background-color: aqua;
+        }
+        .voilet{
+            background-color: violet;
+        }
+        #spantag{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="spantag">
+        <span id="span" class="white" onclick="changBG('#ffffff')"></span>
+        <span id="span" class="black" onclick="changBG('#000000')"></span>
+        <span id="span" class="aqua" onclick="changBG('#00ffff')"></span>
+        <span id="span" class="voilet" onclick="changBG('#8f00ff')"></span>
+    </div>
+    <h1 class="text">About us</h1>
+    <img src="/Hwebdevelop/Notes/pexels-fabian-reitmeier-707915.jpg" alt="">
+    <p class="text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, dignissimos repellat. Cum, aspernatur consequatur. Officia earum fugit distinctio, iusto nemo tenetur in accusamus harum minus maxime soluta, suscipit debitis at. Assumenda eveniet numquam optio quia harum laudantium non, ea repellendus exercitationem, amet ducimus. Deserunt, sequi fugit nostrum id ab iure reprehenderit perferendis error at ex consequatur? A sapiente non vitae alias repellat maxime harum sint. Velit quasi unde aliquid suscipit sapiente laborum, molestiae nostrum esse totam harum sequi inventore magnam aspernatur ab porro! Ab adipisci expedita nisi sed ad ratione modi unde architecto dolor! Voluptate recusandae obcaecati totam quaerat a? Cumque, aliquam omnis sapiente ad facere reprehenderit, quaerat unde explicabo corporis ea pariatur iste sunt alias harum cupiditate porro. Expedita sit aut maiores nemo nostrum rerum voluptate aspernatur quia ducimus quis, ullam accusantium culpa explicabo ipsam ut! Voluptas corporis ea at veritatis quas soluta dolorem cum iste vel. Animi facilis optio iste recusandae saepe? Esse dolorem officiis tempora laboriosam ipsam pariatur, perferendis sunt odit praesentium molestiae, alias consectetur magnam, officia nesciunt illo id exercitationem ad! Et quasi nulla dolorem! Quasi accusamus ipsam non dolor hic obcaecati sed dicta consequuntur ut, vel optio doloribus blanditiis ducimus? Excepturi quia quibusdam porro. Explicabo sequi, modi fugiat soluta inventore quos atque excepturi saepe similique non ipsam. Pariatur unde numquam, fuga rerum cumque enim illo hic odio vel dolore, fugiat molestias ullam accusantium laudantium quidem sed quasi officia saepe nulla est quae nemo asperiores? Ad, eos unde amet tempore corporis pariatur placeat vero. Tempore atque quisquam autem dignissimos dicta fugit porro deserunt adipisci ipsa, nulla recusandae exercitationem sapiente vitae error! Odio blanditiis impedit at unde ipsum est laudantium quidem labore minima architecto nisi velit magnam, sequi cupiditate incidunt expedita reiciendis dignissimos natus quae. Similique, placeat modi harum omnis quibusdam laboriosam numquam nemo accusantium necessitatibus eos totam autem fugiat, ex neque corrupti esse distinctio, laborum animi quidem quod vero sunt consequatur. Saepe sapiente a minima ut reprehenderit eius nobis fugit odio facere, ab molestias excepturi ea eaque tempore expedita iste? Perspiciatis eos doloremque officiis facilis et assumenda minima ipsam culpa similique dolorum sint distinctio expedita sapiente cupiditate ratione, quis eius quaerat aliquam laborum eum corrupti ex nisi odio? Veritatis at libero quibusdam optio. Autem ullam nulla saepe illo odio error quisquam eius, optio est quas minus rem assumenda neque ducimus? Eaque voluptas animi asperiores. A fuga recusandae temporibus, quam velit, ut ipsum eos inventore vero, accusamus dolorem voluptatem quisquam. Officia voluptate id, quae dolore quibusdam ipsam numquam dolorem officiis dolor recusandae nemo dicta distinctio corporis vitae deleniti hic eligendi nam commodi explicabo cum est magni optio omnis! Quo, nemo voluptatem necessitatibus cumque tempore, soluta ex autem quaerat odit officia recusandae, modi dicta consectetur iure obcaecati voluptatibus? Laudantium suscipit quos voluptate dolorum molestiae provident adipisci libero ex porro doloremque nam, qui beatae tenetur sapiente et amet excepturi recusandae rerum delectus ratione nemo aspernatur optio at? Ex inventore ea assumenda dolore molestias reiciendis vero recusandae, incidunt illum sed officiis necessitatibus? Ratione non est in distinctio officiis delectus. Dignissimos.
+    </p>
+    <script>
+        function changBG(color){
+            document.body.style.backgroundColor = color;
+            let text = document.getElementsByClassName("text")
+            if(color == '#000000'){
+                for(let ele of text){
+                    ele.style.color = 'white'
+
+                }
+            }
+            else{
+                for(let ele of text){
+                    ele.style.color = 'black'
+                }
+            }
+        }
+    </script>
+</body>
+</html>
